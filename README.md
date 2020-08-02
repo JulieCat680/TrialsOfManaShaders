@@ -28,7 +28,7 @@ These materials use the full *MF_ShadingBase* function:
 - M_ch_BaseVer03
 - M_ch_BaseVer03_ADD
 
-These materials are heavily based on the *MF_ShadingBase* or use parts of it:
+These materials are heavily based on *MF_ShadingBase* or use parts of it:
 - M_ch_BaseVer03_HairMatCap
 - M_ch_Hair
 - M_ch_Skin
