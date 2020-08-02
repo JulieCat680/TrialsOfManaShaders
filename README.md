@@ -161,7 +161,7 @@ The eye material takes 3 texture maps and composites them using fake parallax to
 
 ### MF_ColorID
 
-A helpful material function allowing multi-channel color mapping to be enabled on-demand for any material using it. Inputs entering into the *IDMap*, *Channel G*, and *Channel B* ports do not get compiled as part of the material unless the **UsedGreenChannel** or **UsedBlueChannel** switches are active.
+A helpful material function allowing on-demand activation of multi-channel color mapping. Inputs entering into the *IDMap*, *Channel G*, and *Channel B* ports do not get compiled as part of the material unless the **UsedGreenChannel** or **UsedBlueChannel** switches are active.
 
 <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/IDMapping.png" />
 
