@@ -51,7 +51,7 @@ The base stylization function is responsible for applying several effects:
 ##### TODO: Add more examples of these effects
 
 #### SpecialFX Rim Lighting
-Used to highlight characters and weapons during special attacks.
+Implemented in the *MF_FXRim* material function. Used to highlight characters and weapons during special attacks.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim1.png" width="20%" />
@@ -60,7 +60,7 @@ Used to highlight characters and weapons during special attacks.
 </span>
 
 #### SpecialFX Ghost Lighting
-Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
+Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost1.png" width="20%" />
@@ -69,11 +69,19 @@ Applies a ghostly glow to models. Also applies a slight dithered transparency ar
 </span>
 
 #### SpecialFX Sihouette
-Turns the model completely black. As the name implies, it is used to only show the sihouette of the character.
+Turns the model completely black. As the name implies, it is used to show only the sihouette of the character.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette1.png" width="20%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="20%" />
+</span>
+
+#### Custom Dither
+
+Implemented in the *MF_CustomDither* material function. Works similar to the *DitheredTemporalAA* node except it exposes additional dither parameters. Varying the dither pattern can allow multiple dithered objects to overlap without obscuring each other.
+<span>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither1.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither2.png" width="30%" />
 </span>
 
 #### M_ch_Jewel
