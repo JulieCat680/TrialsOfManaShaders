@@ -167,6 +167,8 @@ A helpful material function allowing on-demand activation of multi-channel color
 
 ## Shader Parameters
 
+#### TODO: Finish filling out this section
+
 | Static Switches          | |
 | ------------------------ |-|
 | **UseSpe**               | Enables specular lighting on the material                                                                |
