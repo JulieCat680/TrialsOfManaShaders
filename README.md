@@ -117,8 +117,8 @@ Implemented in the *MF_FXRim* material function. Used to highlight characters an
 Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
 <div>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost2.png" width="40%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost2.png" width="40%" /?
 </div>
 
 ### SpecialFX Sihouette
