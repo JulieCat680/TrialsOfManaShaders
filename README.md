@@ -48,7 +48,33 @@ The base stylization function is responsible for applying several effects:
 - SpecialFX black overlay for silhouetting
 - Custom opacity dithering
 
-##### TODO: Add examples of these effects
+##### TODO: Add more examples of these effects
+
+#### SpecialFX Rim Lighting
+Used to highlight characters and weapons during special attacks.
+
+<span>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim1.png" width="20%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim2.png" width="20%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="30%" />
+</span>
+
+#### SpecialFX Ghost Lighting
+Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
+
+<span>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost1.png" width="20%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost2.png" width="20%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="20%" />
+</span>
+
+#### SpecialFX Sihouette
+Turns the model completely black. As the name implies, it is used to only show the sihouette of the character.
+
+<span>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette1.png" width="20%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="20%" />
+</span>
 
 #### M_ch_Jewel
 The jewel material applies a faceting effect. It also takes a color gradient used to emulate color diffraction over the surface of the material.
