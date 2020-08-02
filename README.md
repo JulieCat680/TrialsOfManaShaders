@@ -159,6 +159,12 @@ The eye material takes 3 texture maps and composites them using fake parallax to
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/EyeShader.gif" width="20%" />
 </span>
 
+### MF_ColorID
+
+A helpful material function allowing multi-channel color mapping to be enabled on-demand for any material using it. Inputs entering into the *IDMap*, *Channel G*, and *Channel B* ports do not get compiled as part of the material unless the **UsedGreenChannel** or **UsedBlueChannel** switches are active.
+
+<img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/IDMapping.png" />
+
 ## Notes
 These shaders were based off of the shaders in the Trials of Mana pre-release demo. As a result there may be differences between them and the final release versions. 
 
