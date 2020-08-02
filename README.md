@@ -14,7 +14,7 @@ These files are intended as a learning resource for technical artists, shader en
 
 Note that while these material graphs are a close reproduction, they do not compile into the matching assembly code of the originals. I am not familiar enough with the Unreal Engine's material compiler to accomplish that.
 
-### About the Shaders
+## About the Shaders
 
 ![Shading Breakdown](https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/ShaderBreakdown.png)
 
@@ -22,36 +22,29 @@ Trials of Mana is one of a steadily expanding group of games that mix stylized c
 
 Similar to standard PBR, Trials of Mana uses flat base colors, normal maps, and Metallic-Roughness-Specular parameters as inputs. However, in addition to the standard pipeline, a custom stylization function is used to apply several effects to the color inputs before the PBR lighting model gets applied.
 
-Most the stylization function is implemented in *MF_ShadingBase* material function (graph shown above). This function serves as the basis for most of the reverse-engineered materials provided:
+Most the stylization function is implemented in *MF_ShadingBase* material function (graph shown above). However, not all materials use the function in its entirety.
+
+These materials use the full *MF_ShadingBase* function:
 - M_ch_BaseVer03
 - M_ch_BaseVer03_ADD
+
+These materials are heavily based on *MF_ShadingBase* or use parts of it:
 - M_ch_BaseVer03_HairMatCap
+- M_ch_Hair
 - M_ch_Skin
 
-M_ch_Skin is a bit different in that it uses Unreal's Preintegrated Subsurface Skin shading model, but most parts of the graph still come from the base shading function.
-
-There are also a few materials that implement their own effects entirely:
-- M_ch_Jewel
+These materials implement their own effects entirely:
 - M_ch_Eye
+- M_ch_EyeEx
+- M_ch_Jewel
+- M_ch_Tear
 
-#### MF_ShadingBase
+## Shader Effects
 
-The base stylization function is responsible for applying several effects:
-- Rim shading and lighting
-- Base specular highlights
-- Anisotropic-specular highlights
-- Tone adjustment
-- Gradient cell-shade light mapping
-- Emissive lighting
-- SpecialFX rim lighting
-- SpecialFX ghost lighting
-- SpecialFX black overlay for silhouetting
-- Custom opacity dithering
+##### TODO: Add more examples
 
-##### TODO: Add more examples of these effects
-
-#### SpecialFX Rim Lighting
-Used to highlight characters and weapons during special attacks.
+### SpecialFX Rim Lighting
+Implemented in the *MF_FXRim* material function. Used to highlight characters and weapons during special attacks.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim1.png" width="20%" />
@@ -59,8 +52,8 @@ Used to highlight characters and weapons during special attacks.
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="30%" />
 </span>
 
-#### SpecialFX Ghost Lighting
-Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
+### SpecialFX Ghost Lighting
+Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost1.png" width="20%" />
@@ -68,15 +61,24 @@ Applies a ghostly glow to models. Also applies a slight dithered transparency ar
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="20%" />
 </span>
 
-#### SpecialFX Sihouette
-Turns the model completely black. As the name implies, it is used to only show the sihouette of the character.
+### SpecialFX Sihouette
+Turns the model completely black. As the name implies, it is used to show only the sihouette of the character.
 
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette1.png" width="20%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="20%" />
 </span>
 
-#### M_ch_Jewel
+### Custom Dither
+
+Implemented in the *MF_CustomDither* material function. Works similar to the *DitheredTemporalAA* node except it exposes additional dither parameters. Varying the dither pattern can allow multiple dithered objects to overlap without obscuring each other.
+
+<span>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither1.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither2.png" width="30%" />
+</span>
+
+### M_ch_Jewel
 The jewel material applies a faceting effect. It also takes a color gradient used to emulate color diffraction over the surface of the material.
 
 <span>
@@ -84,7 +86,7 @@ The jewel material applies a faceting effect. It also takes a color gradient use
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShaderModel.png" width="20%" />
 </span>
 
-#### M_ch_Eye
+### M_ch_Eye
 
 The eye material takes 3 texture maps and composites them using fake parallax to give eyes the appearance of depth
 
@@ -95,7 +97,7 @@ The eye material takes 3 texture maps and composites them using fake parallax to
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/EyeShader.gif" width="20%" />
 </span>
 
-### Notes
+## Notes
 These shaders were based off of the shaders in the Trials of Mana pre-release demo. As a result there may be differences between them and the final release versions. 
 
 - The **M_ch_BaseVer03_HairMatCap** shader used for Riesz' hair does not properly darken when the **BlackSiletSwitch** parameter is active. This was verified against the original compiled shader from the demo's game files.
