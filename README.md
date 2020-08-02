@@ -171,8 +171,8 @@ A helpful material function allowing on-demand activation of multi-channel color
 | ------------------------ |-|
 | **UseSpe**               | Enables specular lighting on the material                                                                |
 | **UseAnisoSpe**          | Enables anisotropic specular lighting on the material                                                    |
-| **UseGreenChannel**      | Enables a second material color channel mapped to the green channel of the IDMap texture                 |
-| **UseBlueChannel**       | Enables a third material color channel mapped to the blue channel of the IDMap texture                   |
+| **UsedGreenChannel**      | Enables a second material color channel mapped to the green channel of the IDMap texture                 |
+| **UsedBlueChannel**       | Enables a third material color channel mapped to the blue channel of the IDMap texture                   |
 
 | Basic Parameters         | |
 | ------------------------ |-|
