@@ -14,7 +14,7 @@ These files are intended as a learning resource for technical artists, shader en
 
 Note that while these material graphs are a close reproduction, they do not compile into the matching assembly code of the originals. I am not familiar enough with the Unreal Engine's material compiler to accomplish that.
 
-### About the Shaders
+## About the Shaders
 
 ![Shading Breakdown](https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/ShaderBreakdown.png)
 
@@ -34,23 +34,11 @@ There are also a few materials that implement their own effects entirely:
 - M_ch_Jewel
 - M_ch_Eye
 
-#### MF_ShadingBase
+## Shader Effects
 
-The base stylization function is responsible for applying several effects:
-- Rim shading and lighting
-- Base specular highlights
-- Anisotropic-specular highlights
-- Tone adjustment
-- Gradient cell-shade light mapping
-- Emissive lighting
-- SpecialFX rim lighting
-- SpecialFX ghost lighting
-- SpecialFX black overlay for silhouetting
-- Custom opacity dithering
+##### TODO: Add more examples
 
-##### TODO: Add more examples of these effects
-
-#### SpecialFX Rim Lighting
+### SpecialFX Rim Lighting
 Implemented in the *MF_FXRim* material function. Used to highlight characters and weapons during special attacks.
 
 <span>
@@ -59,7 +47,7 @@ Implemented in the *MF_FXRim* material function. Used to highlight characters an
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="30%" />
 </span>
 
-#### SpecialFX Ghost Lighting
+### SpecialFX Ghost Lighting
 Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
 <span>
@@ -68,7 +56,7 @@ Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly gl
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="20%" />
 </span>
 
-#### SpecialFX Sihouette
+### SpecialFX Sihouette
 Turns the model completely black. As the name implies, it is used to show only the sihouette of the character.
 
 <span>
@@ -76,15 +64,16 @@ Turns the model completely black. As the name implies, it is used to show only t
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="20%" />
 </span>
 
-#### Custom Dither
+### Custom Dither
 
 Implemented in the *MF_CustomDither* material function. Works similar to the *DitheredTemporalAA* node except it exposes additional dither parameters. Varying the dither pattern can allow multiple dithered objects to overlap without obscuring each other.
+
 <span>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither1.png" width="30%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither2.png" width="30%" />
 </span>
 
-#### M_ch_Jewel
+### M_ch_Jewel
 The jewel material applies a faceting effect. It also takes a color gradient used to emulate color diffraction over the surface of the material.
 
 <span>
@@ -92,7 +81,7 @@ The jewel material applies a faceting effect. It also takes a color gradient use
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShaderModel.png" width="20%" />
 </span>
 
-#### M_ch_Eye
+### M_ch_Eye
 
 The eye material takes 3 texture maps and composites them using fake parallax to give eyes the appearance of depth
 
@@ -103,7 +92,7 @@ The eye material takes 3 texture maps and composites them using fake parallax to
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/EyeShader.gif" width="20%" />
 </span>
 
-### Notes
+## Notes
 These shaders were based off of the shaders in the Trials of Mana pre-release demo. As a result there may be differences between them and the final release versions. 
 
 - The **M_ch_BaseVer03_HairMatCap** shader used for Riesz' hair does not properly darken when the **BlackSiletSwitch** parameter is active. This was verified against the original compiled shader from the demo's game files.
