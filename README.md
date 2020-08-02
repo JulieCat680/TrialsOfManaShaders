@@ -114,7 +114,7 @@ Implemented in the *MF_FXRim* material function. Used to highlight characters an
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="30%" />
 </span>
 
-### SpecialFX Ghost Lighting
+### SpecialFX Ghost Fresnel
 Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
 <span>
@@ -164,6 +164,48 @@ The eye material takes 3 texture maps and composites them using fake parallax to
 A helpful material function allowing multi-channel color mapping to be enabled on-demand for any material using it. Inputs entering into the *IDMap*, *Channel G*, and *Channel B* ports do not get compiled as part of the material unless the **UsedGreenChannel** or **UsedBlueChannel** switches are active.
 
 <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/IDMapping.png" />
+
+## Shader Parameters
+
+| Static Switches          | |
+| ------------------------ |-|
+| **UseSpe**               | Enables specular lighting on the material                                                                |
+| **UseAnisoSpe**          | Enables anisotropic specular lighting on the material                                                    |
+| **UseGreenChannel**      | Enables a second material color channel mapped to the green channel of the IDMap texture                 |
+| **UseBlueChannel**       | Enables a third material color channel mapped to the blue channel of the IDMap texture                   |
+
+| Basic Parameters         | |
+| ------------------------ |-|
+| **BlackSiletSwitch**     | Enables SpecialFX Silhouette mode. Should be 0 or 1.                                                     |
+| **ColorPow**             | A color adjustment parameter. Saturation decreases as it approaches 1.                                   |
+| **Opacity**              | Material opacity                                                                                         |
+| **Emi**                  | Color modulation parameter. Despite its name, it can be used to both light or darken the final color     |
+
+| Anisotropic Specular     | |
+| ------------------------ |-|
+| **AnisoRoughnessX**      | X roughness parameter. Stretches the specular highlight horizontally                                     |
+| **AnisoRoughnessY**      | Y roughness parameter. Stretches the specular highlight vertically                                       |
+| **AnisoLightColor**      | The color of reflected light                                                                             |
+
+| SpecialFX Rim Light      | |
+| ------------------------ |-|
+| **FXRim_Color**          | Color of the rim effect                            |
+| **FXRim_Int**            | Intensity                                          |
+| **FXRim_Range**          | Coverage                                           |
+| **FXRim_Switch**         | Enables the SpecialFX Rim light. Should be 0 or 1. |
+
+| SpecialFX Ghost Fresnel  | |
+| ------------------------ |-|
+| **GhAlphaTest**          | Alpha threshold for fringe transparency |
+| **GhFresnel_Color**      | Color of the ghost effect               |
+| **GhFresnel_Base**       | Lighting base                           |
+| **GhFresnel_Exp**        | Lighting exponent                       |
+
+| Custom Dither            | |
+| ------------------------ |-|
+| **Dither**               | Dithering factor |
+| **x**                    | X offset         |
+| **y**                    | Y offset         |
 
 ## Notes
 These shaders were based off of the shaders in the Trials of Mana pre-release demo. As a result there may be differences between them and the final release versions. 
