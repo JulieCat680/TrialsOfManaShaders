@@ -22,17 +22,22 @@ Trials of Mana is one of a steadily expanding group of games that mix stylized c
 
 Similar to standard PBR, Trials of Mana uses flat base colors, normal maps, and Metallic-Roughness-Specular parameters as inputs. However, in addition to the standard pipeline, a custom stylization function is used to apply several effects to the color inputs before the PBR lighting model gets applied.
 
-Most the stylization function is implemented in *MF_ShadingBase* material function (graph shown above). This function serves as the basis for most of the reverse-engineered materials provided:
+Most the stylization function is implemented in *MF_ShadingBase* material function (graph shown above). However, not all materials use the function in its entirety.
+
+These materials use the full *MF_ShadingBase* function:
 - M_ch_BaseVer03
 - M_ch_BaseVer03_ADD
+
+These materials are heavily based on the *MF_ShadingBase* or use parts of it:
 - M_ch_BaseVer03_HairMatCap
+- M_ch_Hair
 - M_ch_Skin
 
-M_ch_Skin is a bit different in that it uses Unreal's Preintegrated Subsurface Skin shading model, but most parts of the graph still come from the base shading function.
-
-There are also a few materials that implement their own effects entirely:
-- M_ch_Jewel
+These materials implement their own effects entirely:
 - M_ch_Eye
+- M_ch_EyeEx
+- M_ch_Jewel
+- M_ch_Tear
 
 ## Shader Effects
 
