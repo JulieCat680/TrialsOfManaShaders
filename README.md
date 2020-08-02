@@ -44,120 +44,118 @@ These materials implement their own effects entirely:
 ### Rim Shadows
 Colored shadows applied relative to the camera's view direction. Applied to hair and clothing.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimShadows1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimShadows2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimShadows1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimShadows2.gif" width="40%" />
+</div>
 
 ### Skin Shadows
 Similar shading as above applied to skin. Uses a slightly different blending formula though.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinShadows1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinShadows2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinShadows1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinShadows2.gif" width="40%" />
+</div>
 
 ### Specular Lighting
 Single source specular lighting for metallic materials. Specular light source and color are controlled in the **MPC_DirectionalLight** parameter collection.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSpecular1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSpecular2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSpecular1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSpecular2.gif" width="40%" />
+</div>
 
 ### Anistropic Specular
 Specular lighting using anisotropic distribution. Uses the same light source as the regular Specular.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepAnisoSpecular1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepAnisoSpecular2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepAnisoSpecular1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepAnisoSpecular2.gif" width="40%" />
+</div>
 
 ### Skin Specular
 Specular lighting applied to skin. Like the other specular options, it is controlled via the **MPC_DirectionalLight** parameter collection.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinSpecular1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinSpecular2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinSpecular1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepSkinSpecular2.gif" width="40%" />
+</div>
 
 ### Cell Lighting
 Graident mapped cell lighting applied relative to the specular light source. Primarily applied to skin and hair.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepCellLighting1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepCellLighting2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepCellLighting1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepCellLighting2.gif" width="40%" />
+</div>
 
 ### Rim Lighting
 Colored rim highlights applied relative to the camera's view direction. Only used for a very subtle skin highlight
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimLight1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimLight2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimLight1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepRimLight2.gif" width="40%" />
+</div>
 
 ### Lighting Modulation
 Color multiplied in at the very end of sytlization function. Defaults to 50% gray allowing the final color to be both lightened and darkened.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepEmissive1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepEmissive2.gif" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepEmissive1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/StepEmissive2.gif" width="40%" />
+</div>
 
 ### SpecialFX Rim Lighting
 Implemented in the *MF_FXRim* material function. Used to highlight characters and weapons during special attacks.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim2.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="30%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim2.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/FXRim3.gif" width="40%" />
+</div>
 
 ### SpecialFX Ghost Fresnel
 Implemented in the *MF_GhostTranslucent* material function. Applies a ghostly glow to models. Also applies a slight dithered transparency around surface edges.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost2.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost2.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Ghost3.png" width="40%" />
+</div>
 
 ### SpecialFX Sihouette
 Turns the model completely black. As the name implies, it is used to show only the sihouette of the character.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette1.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Silhouette2.png" width="40%" />
+</div>
 
 ### Custom Dither
 
 Implemented in the *MF_CustomDither* material function. Works similar to the *DitheredTemporalAA* node except it exposes additional dither parameters. Varying the dither pattern can allow multiple dithered objects to overlap without obscuring each other.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither1.png" width="30%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither2.png" width="30%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither1.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/CustomDither2.png" width="40%" />
+</div>
 
 ### M_ch_Jewel
 The jewel material applies a faceting effect. It also takes a color gradient used to emulate color diffraction over the surface of the material.
 
-<span>
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShader.png" width="20%" />
-  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShaderModel.png" width="20%" />
-</span>
+<div>
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShader.png" width="40%" />
+  <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/JewelShaderModel.png" width="40%" />
+</div>
 
 ### M_ch_Eye
 
 The eye material takes 3 texture maps and composites them using fake parallax to give eyes the appearance of depth
 
-<span>
+<div>
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Eye1.png" width="20%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Eye2.png" width="20%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/Eye3.png" width="20%" />
   <img src="https://raw.githubusercontent.com/JasonL663/TrialsOfManaShaders/master/Images/EyeShader.gif" width="20%" />
-</span>
+</div>
 
 ### MF_ColorID
 
